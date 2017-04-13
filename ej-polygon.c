@@ -1220,8 +1220,8 @@ process_problem_row(
         fprintf(log_f, "failed to extract the content of column 3 (problemName): %.60s...\n", s);
         goto cleanup;
     }
-    if (strcmp(pi->problem_name, buf) != 0) {
-        fprintf(log_f, "problemName mismatch: <tr>: %s, <td>: %s\n", pi->problem_name, buf);
+    if (strcmp(pi->problem_name, pi->problem_name) != 0) {
+        fprintf(log_f, "problemName mismatch: <tr>: %s, <td>: %s\n", pi->problem_name, pi->problem_name);
         goto cleanup;
     }
     if (!(s = strstr(s, "<td"))) {
