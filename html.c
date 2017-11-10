@@ -641,7 +641,7 @@ setup_standings_style(struct standings_style *ps,
 
   if (!ps->table_attr[0]) {
     if (global->stand_fancy_style || force_fancy_style)
-      ps->table_attr = " width=\"100%\" class=\"standings\"";
+      ps->table_attr = " class=\"standings\"";
     else if (!global->stand_row_attr)
       ps->table_attr = " border=\"1\"";
   }
